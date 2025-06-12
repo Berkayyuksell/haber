@@ -1,0 +1,129 @@
+:root {
+  /* Ana renkler */
+  --primary-color: #673ab7;
+  --secondary-color: #3f51b5;
+  --background-dark: #121212;
+  --surface-dark: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --error-color: #f44336;
+  --success-color: #4caf50;
+
+  /* Mesaj renkleri */
+  --message-user-bg: linear-gradient(145deg, #673ab7 0%, #3f51b5 100%);
+  --message-bot-bg: rgba(255, 255, 255, 0.1);
+  --message-bot-border: rgba(255, 255, 255, 0.2);
+
+  /* Input renkleri */
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(255, 255, 255, 0.23);
+  --input-border-hover: rgba(255, 255, 255, 0.5);
+  --input-text: #ffffff;
+
+  /* Gradyanlar */
+  --gradient-primary: linear-gradient(145deg, #673ab7 0%, #3f51b5 100%);
+  --gradient-hover: linear-gradient(145deg, #512da8 0%, #303f9f 100%);
+  --gradient-surface: linear-gradient(145deg, #1e1e1e 0%, #2d2d2d 100%);
+
+  /* Gölgeler */
+  --shadow-sm: 0 4px 14px 0 rgba(103, 58, 183, 0.3);
+  --shadow-md: 0 4px 20px 0 rgba(103, 58, 183, 0.3);
+  --shadow-lg: 0 6px 20px 0 rgba(103, 58, 183, 0.6);
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
+}
+
+/* Temel stiller */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Scrollbar stilleri */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Material-UI tema override'ları */
+.MuiPaper-root {
+  background-image: none !important;
+}
+
+.MuiButton-root {
+  text-transform: none !important;
+  border-radius: var(--radius-md) !important;
+  padding: 8px 24px !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.MuiButton-root:hover {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Input alanı stilleri */
+.MuiOutlinedInput-root {
+  border-radius: var(--radius-md) !important;
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: var(--input-border) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--input-border-hover) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary-color) !important;
+}
+
+.MuiOutlinedInput-input {
+  color: var(--input-text) !important;
+}
+
+.MuiOutlinedInput-input::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 0.7;
+}
+
+/* Mesaj stilleri */
+.message-user {
+  background: var(--message-user-bg) !important;
+  color: white !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.message-bot {
+  background: var(--message-bot-bg) !important;
+  border: 1px solid var(--message-bot-border) !important;
+  color: var(--text-primary) !important;
+}
